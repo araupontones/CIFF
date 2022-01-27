@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-01-26T14:54:25.166Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="xRYjy-e1jjAlhR8_urv6" version="16.4.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-27T09:29:57.114Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="cz2jwfs2mn20Bj0S3qe0" version="16.4.7" type="github">
   <diagram id="dJZKOWDISTuPQdQxTCNS" name="Page-1">
-    <mxGraphModel dx="1422" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -125,9 +125,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="YUCrWeUf01AnN3clfY8e-54" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.nsx_dashboard;" parent="1" vertex="1">
-          <mxGeometry x="750" y="135" width="139.78" height="130" as="geometry" />
-        </mxCell>
         <mxCell id="YUCrWeUf01AnN3clfY8e-56" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 15px&quot;&gt;Partners report results via an online form on a quarterly basis&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="1" vertex="1">
           <mxGeometry x="60" y="90" width="270" height="60" as="geometry" />
         </mxCell>
@@ -143,11 +140,34 @@
         <mxCell id="YUCrWeUf01AnN3clfY8e-64" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 15px&quot;&gt;All the data is stored in a unique and online repository from which the data can be exported into various formats&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="1" vertex="1">
           <mxGeometry x="355" y="15" width="260" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="YUCrWeUf01AnN3clfY8e-65" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 15px&quot;&gt;A dashboard pulls the data directly from the online database and visualizes the results based on the ToC structure and the evaluaion framework&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="1" vertex="1">
-          <mxGeometry x="689.89" y="295" width="260" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="YUCrWeUf01AnN3clfY8e-66" value="&lt;font face=&quot;Courier New&quot; size=&quot;1&quot;&gt;&lt;i style=&quot;font-size: 12px&quot;&gt;*9 indicators are informed by secondary sources&lt;/i&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="470" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1TQbYOgZ070DcKr5TjSY-1" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#000000;shadow=0;dashed=0;shape=mxgraph.ios7.icons.documents;" vertex="1" parent="1">
+          <mxGeometry x="800" y="340" width="101.11" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1TQbYOgZ070DcKr5TjSY-4" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="710" y="70" width="260" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="YUCrWeUf01AnN3clfY8e-54" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.nsx_dashboard;" parent="1TQbYOgZ070DcKr5TjSY-4" vertex="1">
+          <mxGeometry x="60.110000000000014" width="139.78" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="YUCrWeUf01AnN3clfY8e-65" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 15px&quot;&gt;A dashboard pulls the data directly from the online database and visualizes the results based on the ToC structure and the evaluaion framework&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="1TQbYOgZ070DcKr5TjSY-4" vertex="1">
+          <mxGeometry y="160" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1TQbYOgZ070DcKr5TjSY-5" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;exitX=0.865;exitY=0.989;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.692;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="YUCrWeUf01AnN3clfY8e-8" target="1TQbYOgZ070DcKr5TjSY-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="410" as="targetPoint" />
+            <mxPoint x="500" y="550" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="569" y="420" />
+              <mxPoint x="780" y="420" />
+              <mxPoint x="780" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1TQbYOgZ070DcKr5TjSY-7" value="&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;font-size: 15px&quot;&gt;The qualitative data of the system will strengthen the narrative of static reports&lt;/span&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="470" width="260" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
