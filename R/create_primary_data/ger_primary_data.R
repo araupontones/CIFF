@@ -8,13 +8,14 @@ all_results <- download_ciff("All_Results1")
 
 
 
-
+names(all_results)
 
 #Keep relevant variables ------------------------------------------------------
 results_clean <- all_results %>%
   select(Partner,
          Lever,
          level_toc = Indicators.Levels_ToC,
+         Name = Name_result,
          Status,
          Period = Period1,
          Indicator = Indicators,

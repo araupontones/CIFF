@@ -7,14 +7,17 @@ source("R/create_tables/styles_tables.R")
 
 exdir <- 'report/tables'
 infile <- "data/Clean/results.csv"
-results <- import(infile) 
+results <- import(infile, encoding = "UTF-8") 
 
+#Define number of columns of the table
+cols <- 6
 
 #Lever as directory
 #Partner as file title and as table header
 
 #order level_toc as merged row
 #Status, Period (order), Pathway (order), Indicator, Description
+
 
 results_partners <- lapply(split(results, results$Partner), function(x){
   
@@ -37,7 +40,7 @@ results_partners <- lapply(split(results, results$Partner), function(x){
   
   #add header -----------------------------------------------------------------
   writeData(wb, sheet_name, partner, startCol = 1,startRow = 1)
-  mergeCells(wb, sheet_name, cols = c(1:5), rows = 1)
+  mergeCells(wb, sheet_name, cols = c(1:cols), rows = 1)
   addStyle(wb, sheet_name, rows = 1, cols = 1, style_headers)
   setRowHeights(wb, sheet_name, rows = 1, heights = 30 )
   
@@ -51,7 +54,7 @@ results_partners <- lapply(split(results, results$Partner), function(x){
     
     column <- which(headers == header)
     writeData(wb, sheet_name, header,startRow = 2, startCol = column)
-    addStyle(wb, sheet_name, rows = 2, cols = c(1:5), style_titles)
+    addStyle(wb, sheet_name, rows = 2, cols = c(1:cols), style_titles)
   }
   
   #ToC levels ------------------------------------------------------------------
@@ -62,8 +65,8 @@ results_partners <- lapply(split(results, results$Partner), function(x){
   #merged row with the name of the toc level
   toc_level_plural <- paste0(toc_level,"s")
   writeData(wb, sheet_name, toc_level_plural, startRow = next_row, startCol = 1)
-  mergeCells(wb, sheet_name, cols = c(1:5), rows = next_row)
-  addStyle(wb, sheet_name, rows = next_row, cols = c(1:5), style_groups)
+  mergeCells(wb, sheet_name, cols = c(1:cols), rows = next_row)
+  addStyle(wb, sheet_name, rows = next_row, cols = c(1:cols), style_groups)
   
   #data of the toc_level ---
   next_row <- next_row + 1
@@ -75,7 +78,7 @@ results_partners <- lapply(split(results, results$Partner), function(x){
   writeData(wb, sheet_name, toc_level_data, startRow = next_row, startCol = 1, colNames = F)
   
   until_row <- next_row + nrow(toc_level_data) - 1
-  addStyle(wb, sheet_name, rows = c(next_row:until_row), cols = c(1:5), style_results, gridExpand = T)
+  addStyle(wb, sheet_name, rows = c(next_row:until_row), cols = c(1:cols), style_results, gridExpand = T)
   
   
   #define start row for the next level
@@ -87,8 +90,9 @@ results_partners <- lapply(split(results, results$Partner), function(x){
   
 
   #Set colum width ---------------------------------------------------------
-  setColWidths(wb, sheet_name, cols = c(1:5), widths = c(
-    
+  setColWidths(wb, sheet_name, cols = c(1:cols), widths = c(
+    #name
+    15,
     #Status and period
     rep(13,2),
     #Indicator and patway

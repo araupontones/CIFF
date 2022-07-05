@@ -55,6 +55,7 @@ ggsave( exfile1,
 #Modal shift ====================================================================
 
 subtitle = "[Modal Shift - from 2021 to first half of 2022]"
+
 toc %>%
   filter(Lever == "Modal Shift") %>%
   alluvial_plot_3() +

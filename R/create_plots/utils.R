@@ -117,7 +117,8 @@ alluvial_plot <- function(.data){
   ggplot(aes(axis1 = Pathway,
                             axis2 = Indicator,
                             y= total)) +
-  geom_alluvium(aes(fill = Indicator)) +
+  geom_alluvium(aes(fill = Indicator),
+                color = grey_light) +
   geom_stratum(fill = color_background,
                color= grey_light) +
   geom_text(stat = "stratum",
@@ -154,20 +155,24 @@ alluvial_plot_3 <- function(.data){
                axis2 = Indicator,
                axis3 = level_toc,
                y = total)) +
-    geom_alluvium(aes(fill = Pathway)) +
+    geom_alluvium(aes(fill = Pathway),
+                  color = grey_light
+                 
+                  ) +
     geom_stratum(fill = color_background,
-                 color= grey_light) +
+                 color= grey_light
+                 ) +
     geom_text(stat = "stratum",
               aes(label = after_stat(stratum)),
               size = 2,
               color = blue_dark
     ) +
-    #text in flow -------------------------------------
-  geom_text(stat = "flow",
-            aes(label = total),
-            nudge_x = -.25,
-            color = grey_light,
-            size = 2) +
+    geom_text(stat = "alluvium", lode.guidance = "frontback",
+              aes(label= total),
+              nudge_x = -.23,
+              color = grey_light,
+                         size = 2) +
+    
     scale_x_discrete(limits = c("Pathways", "Results", "Level ToC"),
                      expand = c(0.05, 0.05, 0.05, 0.15),
                      position = "top") +
