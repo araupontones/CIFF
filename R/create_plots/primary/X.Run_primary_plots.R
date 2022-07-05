@@ -1,5 +1,7 @@
 #'create all charts
 
+source("R/create_plots/themes.R")
+source("R/create_plots/utils.R")
 scripts <- list.files("R/create_plots/primary", full.names = T)
 scripts <- scripts[!grepl("X", scripts)]
 

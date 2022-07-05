@@ -70,16 +70,43 @@ theme_ciff <- function(){
 
 theme_stacked <- function(){
   
-  theme(legend.text = element_text(size = 4.5),
+  theme(legend.text = element_text(size = 7),
         legend.position = "bottom",
-        legend.justification='left',
-        legend.box = "horizontal",
-        legend.margin = margin(0),
+        legend.justification = c(0,1),
+        legend.margin = margin(r = 0, b = 10, l = -60, unit = "pt"),
+        
         legend.key.height = unit(.3, 'cm'), #change legend key height
         legend.key.width = unit(.3, 'cm'), #change legend key width
         legend.key = element_rect(color = NA),
-        axis.text.y = element_text(hjust = 0)
-        
-        
+        axis.text.y = element_text(hjust = 0)  
+        )
+}
+
+
+#theme alluvial -----------------------------------------------------
+theme_alluvial <-function(){
+  
+  theme(
+    text = element_text(family = font, color = blue_dark),
+    #Panel
+    panel.background = element_rect(fill = color_background, colour = NA),
+    panel.border = element_blank(),
+    # panel.border = element_rect(colour = color_background, 
+    #                             fill=NA, size=1),
+    
+    
+    #Plot
+    plot.background = element_rect(fill = color_background, color = NA),
+    plot.title = element_text(margin = margin(t = 5, l=5,b = 5), size = 14, face = "bold"),
+    plot.subtitle = element_text(margin = margin(b = 15), size = 12),
+    plot.caption = ggtext::element_markdown(hjust = 0, size = 8,
+                                            margin = margin(b = 10)),
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    legend.position = "none",
+    
+    #Axis
+    axis.text.x = element_text(size = 8, colour = blue_dark, face = "bold"),
+    axis.title.x = element_text(size = 10)
   )
 }

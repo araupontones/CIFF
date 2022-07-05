@@ -1,3 +1,4 @@
+cli::cli_alert_info("Plot: results by partner")
 library(rio)
 library(dplyr)
 library(ggplot2)
@@ -30,7 +31,10 @@ results %>%
        x = "Results (#)"
   ) +
   theme_ciff() +
-  theme_stacked()
+  theme_stacked() +
+  theme(
+    legend.margin = margin(l = -30, b = 10)
+  )
 
 
 

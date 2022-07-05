@@ -142,28 +142,38 @@ alluvial_plot <- function(.data){
        y = "",
        x = "Reported"
   ) +
-  theme(
-    text = element_text(family = font, color = blue_dark),
-    #Panel
-    panel.background = element_rect(fill = color_background, colour = NA),
-    panel.border = element_blank(),
-    # panel.border = element_rect(colour = color_background, 
-    #                             fill=NA, size=1),
-    
-    
-    #Plot
-    plot.background = element_rect(fill = color_background, color = NA),
-    plot.title = element_text(margin = margin(t = 5, l=5,b = 5), size = 14, face = "bold"),
-    plot.subtitle = element_text(margin = margin(b = 15), size = 12),
-    plot.caption = ggtext::element_markdown(hjust = 0, size = 8,
-                                            margin = margin(b = 10)),
-    plot.title.position = "plot",
-    plot.caption.position = "plot",
-    legend.position = "none",
-    
-    #Axis
-    axis.text.x = element_text(size = 8, colour = blue_dark, face = "bold"),
-    axis.title.x = element_text(size = 10)
-  )
+  theme_alluvial()
 }
+
+#Alluvial Toc, Pathways, Indicator =============================================
+alluvial_plot_3 <- function(.data){
+  
+  
+  .data %>%
+    ggplot(aes(axis1= Pathway,
+               axis2 = Indicator,
+               axis3 = level_toc,
+               y = total)) +
+    geom_alluvium(aes(fill = Pathway)) +
+    geom_stratum(fill = color_background,
+                 color= grey_light) +
+    geom_text(stat = "stratum",
+              aes(label = after_stat(stratum)),
+              size = 2,
+              color = blue_dark
+    ) +
+    #text in flow -------------------------------------
+  geom_text(stat = "flow",
+            aes(label = total),
+            nudge_x = -.25,
+            color = grey_light,
+            size = 2) +
+    scale_x_discrete(limits = c("Pathways", "Results", "Level ToC"),
+                     expand = c(0.05, 0.05, 0.05, 0.15),
+                     position = "top") +
+    theme_void() +
+    theme_alluvial()
+    
+}
+
 
