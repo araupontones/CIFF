@@ -3,7 +3,7 @@ library(rio)
 library(dplyr)
 library(ggplot2)
 infile <- "data/Clean/results.csv"
-exdir <- "plots/results"
+exdir <- "report/plots/results"
 
 #Plot parameters -------------------------------------------
 title = "Number of results reported"

@@ -6,9 +6,6 @@ exfile <- "data/Clean/results.csv"
 #download from zoho
 all_results <- download_ciff("All_Results1")
 
-names(all_results)
-indicators <- download_ciff("All_Indicators") %>%
-  select(Indicator, Levels_ToC)
 
 
 
@@ -30,7 +27,8 @@ results_clean <- all_results %>%
                                Indicator == "Policy recommendations for improving technical and financial capacity of cities"   ~ "Policy recommendations",
                                T ~ Indicator
                                )
-         ) 
+         ) %>%
+  arrange(Partner, Period, level_toc, Pathway, Indicator)
  
 
 
@@ -38,3 +36,4 @@ results_clean <- all_results %>%
 
 #export ===================================================================
 export(results_clean, exfile)
+

@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(ggalluvial)
 infile <- "data/Clean/results.csv"
-exdir <- "plots/results"
+exdir <- "report/plots/results"
 
 #Plot parameters -------------------------------------------
 title = "Interaction between pathways, results, and ToC"
