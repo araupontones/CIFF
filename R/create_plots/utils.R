@@ -89,7 +89,7 @@ stacked_plot <- function(  .data,
                            y,
                            fill,
                            label,
-                           rows_legend = 3){
+                           rows_legend = 4){
   
   
   .data %>%
@@ -103,7 +103,8 @@ stacked_plot <- function(  .data,
       width = .7
     ) +
     geom_text(position = position_stack(vjust = .5),
-              color = grey_light
+              color = grey_light,
+              size = 2
     ) +
     scale_x_continuous(expand = c(0,0))+
     scale_fill_manual(values = palette) +

@@ -17,15 +17,40 @@ Source = "Programme's MEL System."
 #Preapare data -----------------------------------------------
 results <- import(infile)
 
+order_pathways <- c("Reduced barriers in auto sector",
+                    "Improve awareness and adoption of EV",
+                    "Improve public awareness and usage of public transport",
+                    "Unlocking policy and regulatory barriers",
+                    "Increased share of railways in freight transport",
+                    "Improve public transport infrastructure & usage",
+                    "Reduce financial barriers")
+
 #count indicators by lever and Pathway
 paths <- results %>% 
-  mutate(Indicator = stringr::str_wrap(Indicator,15),
-         Pathway = stringr::str_wrap(Pathway,15)) %>%
+  mutate(Indicator = stringr::str_wrap(Indicator,30),
+         Pathway = stringr::str_wrap(Pathway,30)) %>%
   group_by(Lever,Pathway,Indicator) %>%
-summarise(total = n(), .groups = 'drop') 
+summarise(total = n(), .groups = 'drop') %>%
+    mutate(Pathway = factor(Pathway,
+                            levels = c( "Reduced barriers in auto\nsector" ,
+                                       
+                                       "Improve awareness & adoption\nof EV",
+                                       
+                                       "Improve public awareness &\nusage of public transport",
+                                       
+                                       "Improve public transport\ninfrastructure & usage" ,
+                                       
+                                       "Unlocking policy & regulatory\nbarriers"     ,
+                                       
+                                       "Reduce financial barriers",
+                                       
+                                       "Increased share of railways in\nfreight transport"),
+                            ordered = T
+                            )
+           )
 
 
-
+unique(paths$Pathway)
 #ZEV ======================================================
 paths %>%
   filter(Lever == "ZEV") %>%

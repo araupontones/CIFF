@@ -3,6 +3,7 @@ extrafont::loadfonts('win')
 
 font<-"Roboto"
 
+aqua <- "#00A9D2"
 blue_dark <- "#0B1F51"
 blue_chart <- "#0D47A1"
 blue_light <- "#47A7E2"
@@ -11,10 +12,12 @@ orange_red <-"#F24F4A"
 guinda <- "#731730"
 green <- "#006344"
 green_light <- "#4DD99E"
+marron <- "#C98929"
+
 
 
 palette <- c(blue_chart, blue_light, orange_red, guinda,
-             green, green_light)
+             green, green_light, aqua, marron)
 
 color_background <- "#DBE4EC"
 
@@ -73,7 +76,7 @@ theme_stacked <- function(){
   theme(legend.text = element_text(size = 7),
         legend.position = "bottom",
         legend.justification = c(0,1),
-        legend.margin = margin(r = 0, b = 10, l = -60, unit = "pt"),
+        legend.margin = margin(r = 0, b = 10, l = -30, unit = "pt"),
         
         legend.key.height = unit(.3, 'cm'), #change legend key height
         legend.key.width = unit(.3, 'cm'), #change legend key width
