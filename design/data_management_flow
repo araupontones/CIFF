@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-14T09:44:21.737Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="w6a6j1j6-gWV9LfXZYUY" version="20.3.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-14T09:45:01.156Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="4wZmxH3nqRbRmzcd4KKl" version="20.3.0" type="github">
   <diagram id="dJZKOWDISTuPQdQxTCNS" name="Page-1">
     <mxGraphModel dx="2207" dy="1406" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -21,7 +21,7 @@
             <mxPoint x="590" y="120" as="sourcePoint" />
             <mxPoint x="690" y="130" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="670" y="60" />
+              <mxPoint x="680" y="110" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -32,13 +32,13 @@
           <mxGeometry x="600" y="370" width="101.11" height="130" as="geometry" />
         </mxCell>
         <mxCell id="1TQbYOgZ070DcKr5TjSY-4" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="710" y="70" width="260" height="220" as="geometry" />
+          <mxGeometry x="740" y="40" width="260" height="244.21" as="geometry" />
         </mxCell>
         <mxCell id="YUCrWeUf01AnN3clfY8e-54" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.nsx_dashboard;" parent="1TQbYOgZ070DcKr5TjSY-4" vertex="1">
           <mxGeometry x="60.110000000000014" width="139.78" height="130" as="geometry" />
         </mxCell>
         <mxCell id="YUCrWeUf01AnN3clfY8e-65" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 17px;&quot;&gt;A &lt;b&gt;dashboard &lt;/b&gt;pulls the data directly from the online database and visualizes the results based on the ToC structure and the evaluation framework&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=1;" parent="1TQbYOgZ070DcKr5TjSY-4" vertex="1">
-          <mxGeometry y="160" width="260" height="60" as="geometry" />
+          <mxGeometry x="-30" y="184.21" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1TQbYOgZ070DcKr5TjSY-5" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;exitX=0.865;exitY=0.989;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.016;entryY=0.445;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="YUCrWeUf01AnN3clfY8e-8" target="1TQbYOgZ070DcKr5TjSY-1" edge="1">
           <mxGeometry relative="1" as="geometry">
